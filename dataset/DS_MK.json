@@ -1,0 +1,36 @@
+{
+	"name": "DS_MK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_SRC",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Config.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "sourcefolder",
+				"type": "String"
+			},
+			{
+				"name": "sinkfolder",
+				"type": "String"
+			}
+		]
+	}
+}
